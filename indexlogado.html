@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho Allan e Matheus Ciriaco 30/09/24</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="crud.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>your tube</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar">
+            <button>pesquisar</button>
+        </div>
+        <div class="user-menu">
+            <h1 id="headerLoginLink">Bem-vindo, Usuário</h1>
+        </div>
+        <button id="logoutButton" onclick="logout()">Deslogar</button>
+    </header>
+    
+    <script>
+
+        const email = localStorage.getItem("loggedInUser");
+    
+
+        const headerLoginLink = document.getElementById('headerLoginLink');
+        if (email && headerLoginLink) {
+            headerLoginLink.innerText = `Bem-vindo, ${email}`;
+        }
+    </script>
+    
+
+    <div class="container">
+        <main class="video-section">
+            
+            <div class="video-player">
+                <iframe width="100%" height="500px" src="https://www.youtube.com/embed/In9eYQtLUwA" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-details">
+                <h2>rock lee vc gaara ao som de linkin park</h2>
+                <p>1.5M visualizações </p>
+                <div class="channel-info">
+                    <img src="https://via.placeholder.com/50" alt="Channel Icon">
+                    <div>
+                        <h3>konoha</h3>
+                        <button>Inscrever-se</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+       
+        <aside class="recommended-videos">
+            <h3>Vídeos Recomendados</h3>
+
+            <div class="video-card">
+                <iframe width="100%" height="150px" src="https://www.youtube.com/embed/In9eYQtLUwA"  ></iframe>
+                <div class="video-info">
+                    <h4>Highlights do rock lee
+                    </h4>
+                    <p>Rock Lee vs gaara ao som de linkin park • 2M visualizações</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <iframe width="100%" height="150px" src="https://www.youtube.com/embed/In9eYQtLUwA" ></iframe>
+                <div class="video-info">
+                    <h4>Rock Lee vs gaara ao som de linkin park</h4>
+                    <p>vila da areia • 1.8M visualizações</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <iframe width="100%" height="150px" src="https://www.youtube.com/embed/In9eYQtLUwA" ></iframe>
+                <div class="video-info">
+                    <h4>Rock Lee vs gaara ao som de linkin park</h4>
+                    <p>vila do som • 1.8M visualizações</p>
+                </div>
+            </div>
+           
+        </aside>
+    </div>
+    <script src="crud.js"></script> 
+</body>
+</html>
